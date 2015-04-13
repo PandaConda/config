@@ -14,6 +14,13 @@ hi Comment ctermfg=yellow
 set number
 set numberwidth=1
 
-" color column to indicate max text size
-set colorcolumn=78
-hi ColorColumn ctermbg=yellow
+" indicate if a row is too long
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+" show ruler
+set ruler
+
+" word-wrap at 79 chars
+set tw=79
+set formatoptions+=t
